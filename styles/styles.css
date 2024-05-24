@@ -1,0 +1,58 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(148, 38%, 91%);
+}
+
+main {
+  margin: auto;
+  background-color: white;
+}
+
+h1 {
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.name-section {
+  display: flex;
+  gap: 1rem;
+}
+
+.first-name,
+.last-name {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.opition-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.options {
+  display: flex;
+  gap: 1rem;
+}
+
+.options button {
+  cursor: pointer;
+  flex: 1;
+  background-color: white;
+}
+
+.consent {
+  display: inline;
+}
+
+.submit {
+  width: 100%;
+  cursor: pointer;
+}
+
+.sent-message {
+  display: none;
+}

@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
   
   <title>Frontend Mentor | Contact form</title>
 
@@ -16,37 +20,66 @@
 </head>
 <body>
 
-  Contact Us
+  <main>
+    <h1>Contact Us</h1>
 
-  First Name
-  This field is required
+    <div class="name-section">
+      <div class="first-name">
+        <div>First Name *</div>
+        <input type="text">
+        <p>This field is required</p>
+      </div>
+      <div class="last-name">
+        <div>Last Name *</div>
+        <input type="text">
+        <p>This field is required</p>
+      </div>
+    </div>
 
-  Last Name
-  This field is required
+    <div class="email-section">
+      <div>Email Address *</div>
+      <input type="text">
+      <p>Please enter a valid email address</p>
+      <p>This field is required</p>
+    </div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+    <div class="option-section">
+      <div>Query Type *</div>
+      <div class="options">
+        <button><img src="assets/images/icon-radio-selected.svg" alt="">General Enquiry</button>
+        <button><img src="assets/images/icon-radio-selected.svg" alt="">Support Request</button>
+      </div>
+      <p>Please select a query type</p>
+    </div>
+    
+    <div class="message-section">
+      <div>Message</div>
+      <input type="text">
+      <p>This field is required</p>
+    </div>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+    <div class="checkbox-section">
+      <input type="checkbox">
+      <p class="consent">I consent to being contacted by the team *</p>
+      <p>To submit this form, please consent to being contacted</p>
+      <p>This field is required</p>
+    </div>
 
-  Message
-  This field is required
+    <button class="submit">Submit</button>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+    <div class="sent-message">
+      Message Sent!
+      Thanks for completing the form. We'll be in touch soon!
+    </div>
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="footer">
+    <div>Email Address</div>
+    <input type="text">
+    <p>Please enter a valid email address</p>
+    <p>This field is required</p>
   </div>
+
+  <script src="js/index.js"></script>
 </body>
 </html>
