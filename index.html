@@ -25,47 +25,58 @@
 
     <div class="name-section">
       <div class="first-name">
-        <div>First Name *</div>
+        <label>First Name <span>*</span></label>
         <input type="text">
-        <p>This field is required</p>
+        <p class="error-message">This field is required</p>
       </div>
       <div class="last-name">
-        <div>Last Name *</div>
+        <label>Last Name <span>*</span></label>
         <input type="text">
-        <p>This field is required</p>
+        <p class="error-message">This field is required</p>
       </div>
     </div>
 
     <div class="email-section">
-      <div>Email Address *</div>
+      <label>Email Address <span>*</span></label>
       <input type="text">
-      <p>Please enter a valid email address</p>
-      <p>This field is required</p>
+      <p class="error-message">Please enter a valid email address</p>
+      <p class="error-message">This field is required</p>
     </div>
 
     <div class="option-section">
-      <div>Query Type *</div>
-      <div class="options">
-        <button><img src="assets/images/icon-radio-selected.svg" alt="">General Enquiry</button>
-        <button><img src="assets/images/icon-radio-selected.svg" alt="">Support Request</button>
+      <label>Query Type <span>*</span></label>
+      <div class="option-container">
+        <div class="radio-button-container">
+          <input type="radio" name="option" value="1">
+          <img src="assets/images/icon-radio-selected.svg" alt="">
+          <label for="">General Enquiry</label>
+        </div>
+        <div class="radio-button-container">
+          <input type="radio" name="option" value="2">
+          <img src="assets/images/icon-radio-selected.svg" alt="">
+          <label for="">Support Request</label>
+        </div>
       </div>
-      <p>Please select a query type</p>
+      <p class="error-message">Please select a query type</p>
     </div>
     
     <div class="message-section">
-      <div>Message</div>
-      <input type="text">
-      <p>This field is required</p>
+      <label>Message <span>*</span></label>
+      <textarea></textarea>
+      <p class="error-message">This field is required</p>
     </div>
 
     <div class="checkbox-section">
-      <input type="checkbox">
-      <p class="consent">I consent to being contacted by the team *</p>
-      <p>To submit this form, please consent to being contacted</p>
-      <p>This field is required</p>
+      <label>
+        <input class="checkbox" id="checkbox" type="checkbox">
+        <img src="assets/images/icon-checkbox-check.svg" alt="">
+        I consent to being contacted by the team <span>*</span>
+      </label>
+      <p class="error-message">To submit this form, please consent to being contacted</p>
+      <p class="error-message">This field is required</p>
     </div>
 
-    <button class="submit">Submit</button>
+    <button class="submit-btn">Submit</button>
 
     <div class="sent-message">
       Message Sent!
@@ -74,10 +85,10 @@
   </main>
   
   <div class="footer">
-    <div>Email Address</div>
-    <input type="text">
-    <p>Please enter a valid email address</p>
-    <p>This field is required</p>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Vince Cedie Pino</a>
+    </div>
   </div>
 
   <script src="js/index.js"></script>

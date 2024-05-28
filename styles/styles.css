@@ -1,4 +1,5 @@
 body {
+  font-family: 'Karla', sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,17 +9,46 @@ body {
 main {
   margin: auto;
   background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 50%;
+  color: hsl(187, 24%, 22%);
 }
 
 h1 {
-  font-family: 'Karla', sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.5rem;
+  margin-top: 0;
+  padding-top: 0;
+  color:  hsl(187, 24%, 22%);
+  font-size: 32px;
+}
+
+span {
+  color: hsl(169, 82%, 27%);
 }
 
 .name-section {
   display: flex;
   gap: 1rem;
+}
+
+label {
+  padding-bottom: 10px;
+}
+
+.name-section input,
+.email-section input {
+  height: 50px;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input {
+  margin-bottom: 20px;
 }
 
 .first-name,
@@ -28,29 +58,123 @@ h1 {
   flex: 1;
 }
 
-.opition-section {
+.email-section {
   display: flex;
   flex-direction: column;
 }
 
-.options {
+.option-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.option-container {
   display: flex;
   gap: 1rem;
 }
 
-.options button {
+.radio-button-container input {
+  margin: 0;
+  height: 18px;
+  width: 18px;
+  margin-right: 10px;
+}
+
+.radio-button-container label {
+  padding: 0;
   cursor: pointer;
+}
+
+.radio-button-container img {
+  margin-left: -19px;
+  cursor: pointer;
+  display: none;
+}
+
+.radio-button-container {
+  height: 50px;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+
   flex: 1;
-  background-color: white;
-}
+  display: flex;
+  align-items: center;
 
-.consent {
-  display: inline;
-}
-
-.submit {
-  width: 100%;
   cursor: pointer;
+}
+
+.message-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.message-section textarea {
+  font-family: 'Karla', sans-serif;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.checkbox-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox-section label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-section label img {
+  position: relative;
+  margin-left: -27px;
+  margin-right: 10px;
+  display: none;
+}
+
+.checkbox-section input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  height: 18px;
+  width: 18px;
+  border: 2px solid hsl(186, 15%, 59%);
+  border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-right: 10px;
+
+  cursor: pointer;
+}
+
+.submit-btn {
+  height: 50px;
+  width: 100%;
+  background-color: hsl(169, 82%, 27%);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.error-message {
+  display: none;
 }
 
 .sent-message {
