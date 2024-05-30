@@ -34,6 +34,7 @@ span {
 }
 
 label {
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 
@@ -45,6 +46,20 @@ label {
   padding: 20px;
   font-size: 16px;
   box-sizing: border-box;
+  margin-bottom: 10px;
+  
+  cursor: pointer;
+}
+
+.name-section input:focus,
+.email-section input:focus {
+  border-color: hsl(169, 82%, 27%);
+  outline: none;
+}
+
+.name-section .error-input,
+.email-section .error-input {
+  border-color: hsl(0, 66%, 56%);
 }
 
 input {
@@ -72,6 +87,7 @@ input {
 .option-container {
   display: flex;
   gap: 1rem;
+  margin-bottom: 10px;
 }
 
 .radio-button-container input {
@@ -87,7 +103,9 @@ input {
 }
 
 .radio-button-container img {
-  margin-left: -19px;
+  margin-left: -29px;
+  margin-right: 9px;
+  margin-bottom: 2px;
   cursor: pointer;
   display: none;
 }
@@ -121,11 +139,24 @@ input {
   border: 1px solid hsl(186, 15%, 59%);
   border-radius: 8px;
   font-size: 16px;
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+
+.message-section textarea:focus {
+  border-color: hsl(169, 82%, 27%);
+  outline: none;
+}
+
+.message-section .error-input {
+  border-color: hsl(0, 66%, 56%);
 }
 
 .checkbox-section {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
 
@@ -175,6 +206,8 @@ input {
 
 .error-message {
   display: none;
+  margin-top: 0;
+  color: hsl(0, 66%, 56%);
 }
 
 .sent-message {
