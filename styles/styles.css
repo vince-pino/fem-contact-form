@@ -107,6 +107,9 @@ input {
   margin-right: 9px;
   margin-bottom: 2px;
   cursor: pointer;
+}
+
+.hidden {
   display: none;
 }
 
@@ -123,6 +126,14 @@ input {
   align-items: center;
 
   cursor: pointer;
+}
+
+.radio-button-container .custom-radio-btn {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  border: 1px solid gray;
+  border-radius: 100%;
 }
 
 .message-section {
