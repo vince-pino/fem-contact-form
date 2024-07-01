@@ -17,32 +17,48 @@ options.forEach((option) => {
     const img1 = document.querySelector('#img1');
     const img2 = document.querySelector('#img2');
 
-    if (!img1.classList.contains("hidden") && img2.classList.contains("hidden")) {
-      img1.classList.add("hidden");
-      img2.classList.remove("hidden");
+    if (img == img1) {
+      if (img1.classList.contains('hidden')) {
+        img1.classList.remove('hidden');
+        img2.classList.add('hidden');
+      }
       radioVal = 1;
-    } 
-    else if (!img2.classList.contains('hidden') && img1.classList.contains('hidden')) {
-      img2.classList.add('hidden');
-      img1.classList.remove('hidden');
+    }
+    else if (img == img2) {
+      if (img2.classList.contains('hidden')) {
+        img2.classList.remove('hidden');
+        img1.classList.add('hidden');
+      }
       radioVal = 2;
     }
-    else {
-      img.classList.remove("hidden");
-    }
+
+
+    // if (!img1.classList.contains("hidden") && img2.classList.contains("hidden")) {
+    //   img1.classList.add("hidden");
+    //   img2.classList.remove("hidden");
+    //   radioVal = 1;
+    // } 
+    // else if (!img2.classList.contains('hidden') && img1.classList.contains('hidden')) {
+    //   img2.classList.add('hidden');
+    //   img1.classList.remove('hidden');
+    //   radioVal = 2;
+    // }
+    // else {
+    //   img.classList.remove("hidden");
+    // }
 
   });
 });
 
 const label = document.querySelector('.checkbox-section label');
 const checkbox = label.querySelector('input[type="checkbox"]');
-const img = label.querySelector('img');
+const img_check = label.querySelector('img');
 
 checkbox.addEventListener('change', () => {
   if (checkbox.checked) {
-    img.style.display = 'block';
+    img_check.style.display = 'block';
   } else {
-    img.style.display = 'none';
+    img_check.style.display = 'none';
   }
 });
 
@@ -56,6 +72,9 @@ submitBtn.addEventListener('click', () => {
   const emailError = document.querySelectorAll('.email-section p');
   const img1 = document.querySelector('#img1');
   const img2 = document.querySelector('#img2');
+  const message = document.querySelector('.message-section textarea');
+  const label = document.querySelector(".checkbox-section label");
+  const img_check = label.querySelector("img");
 
   if (firstName === '' ) {
     document.querySelector('.first-name input').classList.add('error-input');
@@ -88,11 +107,28 @@ submitBtn.addEventListener('click', () => {
     emailError[0].style.display = 'none';
     emailError[1].style.display = 'none';
   }
-  // fix this
+
   if (img1.classList.contains('hidden') && img2.classList.contains('hidden')) {
     document.querySelector('.option-section p').style.display = 'block';
   }
   else {
     document.querySelector('.option-section p').style.display = 'none';
   }
+
+  if (message.value === '') {
+    document.querySelector('.message-section textarea').classList.add('error-input');
+    document.querySelector('.message-section p').style.display = 'block';
+  }
+  else {
+    document.querySelector('.message-section textarea').classList.remove('error-input');
+    document.querySelector('.message-section p').style.display = 'none';
+  }
+
+  if(img_check.style.display === 'block') {
+    document.querySelector('.checkbox-section p').style.display = 'none';
+  }
+  else {
+    document.querySelector('.checkbox-section p').style.display = 'block';
+  }
+
 });
