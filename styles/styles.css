@@ -57,6 +57,11 @@ label {
   outline: none;
 }
 
+.name-section input:hover,
+.email-section input:hover {
+  border-color: hsl(169, 82%, 27%);
+}
+
 .name-section .error-input,
 .email-section .error-input {
   border-color: hsl(0, 66%, 56%);
@@ -96,6 +101,11 @@ input {
   width: 18px;
   margin-right: 10px;
 }
+
+.bg-light-green {
+  background-color: hsl(148, 38%, 91%);
+}
+
 
 .radio-button-container label {
   padding: 0;

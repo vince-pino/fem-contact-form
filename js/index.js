@@ -14,38 +14,24 @@ let radioVal = 0;
 options.forEach((option) => {
   option.addEventListener('click', () => {
     const img = option.querySelector('img');
+    const radio1 = document.querySelector('#radio-1');
+    const radio2 = document.querySelector('#radio-2');
     const img1 = document.querySelector('#img1');
     const img2 = document.querySelector('#img2');
 
-    if (img == img1) {
-      if (img1.classList.contains('hidden')) {
-        img1.classList.remove('hidden');
-        img2.classList.add('hidden');
-      }
-      radioVal = 1;
-    }
-    else if (img == img2) {
-      if (img2.classList.contains('hidden')) {
-        img2.classList.remove('hidden');
-        img1.classList.add('hidden');
-      }
-      radioVal = 2;
-    }
-
-
-    // if (!img1.classList.contains("hidden") && img2.classList.contains("hidden")) {
-    //   img1.classList.add("hidden");
-    //   img2.classList.remove("hidden");
-    //   radioVal = 1;
-    // } 
-    // else if (!img2.classList.contains('hidden') && img1.classList.contains('hidden')) {
-    //   img2.classList.add('hidden');
-    //   img1.classList.remove('hidden');
-    //   radioVal = 2;
-    // }
-    // else {
-    //   img.classList.remove("hidden");
-    // }
+     if (img === img1) {
+       img1.classList.remove("hidden");
+       img2.classList.add("hidden");
+       radio1.classList.add("bg-light-green");
+       radio2.classList.remove("bg-light-green");
+       radioVal = 1;
+     } else if (img === img2) {
+       img2.classList.remove("hidden");
+       img1.classList.add("hidden");
+       radio2.classList.add("bg-light-green");
+       radio1.classList.remove("bg-light-green");
+       radioVal = 2;
+     }
 
   });
 });
