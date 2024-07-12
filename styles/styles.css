@@ -3,7 +3,10 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 120px;
   background-color: hsl(148, 38%, 91%);
+
+  position: relative;
 }
 
 main {
@@ -76,6 +79,7 @@ input {
   display: flex;
   flex-direction: column;
   flex: 1;
+  min-width: 20px;
 }
 
 .email-section {
@@ -165,6 +169,10 @@ input {
   cursor: pointer;
 }
 
+.message-section textarea:hover {
+  border-color: hsl(169, 82%, 27%);
+}
+
 .message-section textarea:focus {
   border-color: hsl(169, 82%, 27%);
   outline: none;
@@ -231,6 +239,52 @@ input {
   color: hsl(0, 66%, 56%);
 }
 
-.sent-message {
+.success-message-container {
+  color: white;
+  background-color: hsl(187, 24%, 22%);
+  padding: 24px;
+  border-radius: 10px;
+  min-width: 300px;
+
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
   display: none;
+}
+
+.success-message {
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.success-message-text {
+  color: hsl(148, 38%, 91%);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    padding-top: 0;
+  }
+
+  main {
+    width: 90%;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .name-section {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .option-container {
+    flex-direction: column;
+  }
 }

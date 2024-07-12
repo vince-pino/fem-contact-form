@@ -62,9 +62,12 @@ submitBtn.addEventListener('click', () => {
   const label = document.querySelector(".checkbox-section label");
   const img_check = label.querySelector("img");
 
+  let hasError = false;
+
   if (firstName === '' ) {
     document.querySelector('.first-name input').classList.add('error-input');
     document.querySelector('.first-name p').style.display = 'block';
+    hasError = true;
   }
   else {
     document.querySelector('.first-name input').classList.remove('error-input');
@@ -73,6 +76,7 @@ submitBtn.addEventListener('click', () => {
   if (lastName === '') {  
     document.querySelector('.last-name input').classList.add('error-input');
     document.querySelector('.last-name p').style.display = 'block';
+    hasError = true;
   }
   else {
     document.querySelector('.last-name input').classList.remove('error-input');
@@ -82,11 +86,13 @@ submitBtn.addEventListener('click', () => {
     document.querySelector('.email-section input').classList.add('error-input');
     emailError[1].style.display = 'block';
     emailError[0].style.display = 'none';
+    hasError = true;
   }
   else if (!isEmailValid) {
     document.querySelector('.email-section input').classList.add('error-input');
     emailError[0].style.display = 'block';
     emailError[1].style.display = 'none';
+    hasError = true;
   }
   else {
     document.querySelector('.email-section input').classList.remove('error-input');
@@ -96,6 +102,7 @@ submitBtn.addEventListener('click', () => {
 
   if (img1.classList.contains('hidden') && img2.classList.contains('hidden')) {
     document.querySelector('.option-section p').style.display = 'block';
+    hasError = true;
   }
   else {
     document.querySelector('.option-section p').style.display = 'none';
@@ -104,6 +111,7 @@ submitBtn.addEventListener('click', () => {
   if (message.value === '') {
     document.querySelector('.message-section textarea').classList.add('error-input');
     document.querySelector('.message-section p').style.display = 'block';
+    hasError = true;
   }
   else {
     document.querySelector('.message-section textarea').classList.remove('error-input');
@@ -115,6 +123,18 @@ submitBtn.addEventListener('click', () => {
   }
   else {
     document.querySelector('.checkbox-section p').style.display = 'block';
+    hasError = true;
+  }
+
+  if (!hasError) {
+    document.querySelector('.success-message-container').style.display = 'block';
+    
+    setInterval(() => {
+      document.querySelector('.success-message-container').style.display = 'none';
+    },3000);
+  }
+  else {
+    document.querySelector('.success-message-container').style.display = 'none';
   }
 
 });
